@@ -2,7 +2,7 @@
 CP1404 Prac_06
 Represent a guitar
 Estimated: 40min
-Actual:
+Actual: 25min
 """
 
 
@@ -16,6 +16,10 @@ class Guitar:
     def __str__(self):
         """Returns a string with the attributes of the guitar"""
         return f"{self.name} ({self.year}) : ${self.cost}"
+
+    def __repr__(self):
+        """Return __str__ method"""
+        return str(self)
 
     def get_age(self):
         """Returns the age of the guitar in years"""

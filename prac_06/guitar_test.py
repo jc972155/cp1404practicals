@@ -2,7 +2,7 @@
 CP1404 Prac_06
 Code to test Guitar class
 Estimated: 40min
-Actual:
+Actual: 25min
 """
 
 from prac_06.guitar import Guitar
