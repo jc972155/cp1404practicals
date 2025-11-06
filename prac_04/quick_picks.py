@@ -23,7 +23,7 @@ def pick_numbers(number_of_picks):
         numbers = []
         while len(numbers) < 5:
             next_num = randint(MIN_PICK, MAX_PICK)
-            if next_num not in numbers:
+            if next_num not in numbers: # If number is already in list, do not add
                 numbers.append(next_num)
         numbers.sort()
         picks.append(numbers)
