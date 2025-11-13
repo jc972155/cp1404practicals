@@ -23,14 +23,20 @@ class ConvertMiles(App):
 
     def handle_convert(self):
         """convert user input to kilometers and update label"""
-        miles = float(self.root.ids.user_input.text) * CONVERSION_FACTOR
-        self.output = f"{miles:.2}"
+        try:
+            miles = float(self.root.ids.user_input.text) * CONVERSION_FACTOR
+            self.output = f"{miles}"
+        except ValueError:
+            self.output = '0.0'
 
     def handle_increment(self, value):
         """Increment the user input and convert to kilometers"""
-        self.root.ids.user_input.text = str(float(self.root.ids.user_input.text) + value)
-        miles = float(self.root.ids.user_input.text) * CONVERSION_FACTOR
-        self.output = f"{miles:.2}"
+        try:
+            self.root.ids.user_input.text = str(float(self.root.ids.user_input.text) + value)
+            ConvertMiles.handle_convert(self)
+        except ValueError:
+            self.root.ids.user_input.text = str(value)
+            ConvertMiles.handle_convert(self)
 
 
 ConvertMiles().run()
