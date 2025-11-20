@@ -6,7 +6,7 @@ Create an object in the Taxi class
 from taxi import Taxi
 
 # Initialise taxi object
-my_taxi = Taxi("Prius 1", 100, 1.23)
+my_taxi = Taxi("Prius 1", 100)
 
 # Drive 40km
 my_taxi.drive(40)
