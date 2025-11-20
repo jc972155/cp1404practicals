@@ -27,8 +27,8 @@ class Band:
 
     def play(self):
         """Print each member of the band and the instrument they play."""
-
+        format_members = []
         for member in self.members:
-
-        return
+            format_members.append(member.play())
+        return '\n'.join(format_members)
                 
