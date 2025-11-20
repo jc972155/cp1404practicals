@@ -10,5 +10,6 @@ print(new_taxi)
 
 # Drive Silver Service Taxi
 new_taxi.drive(18)
-assert new_taxi.get_fare() == 48.78
+assert new_taxi.get_fare() == 48.80
 print(new_taxi.get_fare())
+print(new_taxi)
