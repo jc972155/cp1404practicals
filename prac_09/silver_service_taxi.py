@@ -24,5 +24,3 @@ class SilverServiceTaxi(Taxi):
     def get_fare(self):
         """Return the price for the taxi trip plus flagfall"""
         return super().get_fare() + SilverServiceTaxi.flagfall
-
-

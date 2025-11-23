@@ -31,4 +31,3 @@ class Band:
         for member in self.members:
             format_members.append(member.play())
         return '\n'.join(format_members)
-                
