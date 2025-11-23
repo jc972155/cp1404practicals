@@ -28,6 +28,8 @@ def is_long_word(word, length=5):
 
 def format_phrase(phrase):
     """
+    Capitalise first letter of string and add full stop to end if one
+    isn't already there
     >>> format_phrase("hello")
     'Hello.'
     >>> format_phrase("It is an ex parrot.")
