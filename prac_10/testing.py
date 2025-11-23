@@ -1,6 +1,8 @@
 """
 CP1404/CP5632 Practical
 Testing code using assert and doctest
+Estimated: 25mins
+Actual:
 """
 
 import doctest
@@ -24,6 +26,19 @@ def is_long_word(word, length=5):
     """
     return len(word) >= length
 
+def format_phrase(phrase):
+    """
+    >>> format_phrase("hello")
+    'Hello.'
+    >>> format_phrase("It is an ex parrot.")
+    'It is an ex parrot.'
+    >>> format_phrase("my name is harry")
+    'My name is harry.'
+    """
+    phrase = phrase.capitalize()
+    if phrase[-1] != ".":
+        phrase = phrase + "."
+    return phrase
 
 
 def run_tests():
@@ -62,7 +77,7 @@ doctest.testmod()
 # 4. Fix the failing is_long_word function
 # Fixed by changing operator from greater than to greater than / equal to
 
-# TODO: 5. Write and test a function to format a phrase as a sentence,
+# 5. Write and test a function to format a phrase as a sentence,
 # starting with a capital and ending with a single full stop.
 # Important: start with a function header and just use pass as the body
 # then add doctests for 3 tests:
@@ -71,3 +86,4 @@ doctest.testmod()
 # and one more that you decide is a useful test.
 # Run your doctests and watch the tests fail.
 # Then write the body of the function so that the tests pass.
+format_phrase("hello")
